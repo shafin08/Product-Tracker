@@ -5,7 +5,7 @@ This product tracker is a useful tool for manufacturers who sells many different
 
 
 # Features
-Allows you to create a database that track the sales, profit and profit margin of your product.
+Allows you to create a database that track the sales, profit and profit margin of your product.                  
 A live tracking mode that allows you to make direct changes to your database and see those changes in real time.
 Display a clear table of each product sales, profit, and profit margin. 
 Display total profit and average profit margin
@@ -15,6 +15,7 @@ Each product have the following attributes:
 - Product ID (integer $>0$).
 - Manufacturer sale price (integer $>0$).
 - Retail price (integer $>0$).
+
 Part 1: Initialize the database
 The first line is the amount of product you want to include in your database
 The following lines will be asked to input the product ID, product sale price, retail price.
