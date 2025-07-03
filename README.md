@@ -35,22 +35,15 @@ There are 3 different types of codes:
 1. Product Sale:
 Typing the product ID equals one sale. 
 
+2. Display Sales information:
+Typing -1 will display a table that shows all the necessary sale information along with total profit and average profit margin.
 
-#### 2. Display Sales Information
-- If `code` is equal to either `-1`, or `-2`, then the code type is **display sales information**.
-- The interface should immediately display the following:
-    1. For each product sold today, show the product ID, quantity sold, profit (i.e., retail price $-$ manufacturer sale price), and profit margin (i.e., profit $/$ retail price).
-        - **Should be sorted by profit margin descending**
-        - See [the next section](#output-format) for formatting details
-        - Exclude products with 0 sales
-    2. Below the table, display the total profit, and the average profit margin for today.
-- After displaying the sales information, if the code is `-1`, then the program should continue running. However, if the code is `-2`, then your program should end.
+Typing -2 will display the final table, final profit and final average profit margin and end the program.
 
+# Ouput
+Item with no sales is omitted when product the sales table.
 
-### Sales Table
-
-The sales table to be printed out on `-1` or `-2` code should look like this:
-
+Example of the output table:
 ```
 
 Sales:
@@ -69,62 +62,8 @@ Total profit: $50
 Average GM: 20.00%
 ```
 
-**Details:**
-- The row containing `...` represents other rows for the sake of this example and should not be part of the output.
-- The `GM (%)` column is the profit margin column.
-- Notice the empty line above `Sales:`, this should always be printed with the table. The purpose is to separate each table if more than one of them are printed consecutively.
-
-**As stated above:**
-1. The table **should be sorted by profit margin (`GM (%)`) descending**
-2. Any items with `0` sales should be omitted.
-
-Additionally, each column should be formatted in the following way
-
-| Column | Alignment | Minimum Width |
-| ------ | ---- | --- |
-| `ID` | Left | $7$ |
-| `Sold` | Left | $7$ |
-| `Profit ($)` | Left | $10$ |
-| `GM (%)` | Right | $6$, to two decimal places |
-
-Each cell should also start and end with a space. So if the following cell displays `10`, is left-aligned, and has a minimum width of $3$ for example, it should look like the following
-
-```
-+-----+
-| 10  |
-+-----+
-```
-
-Notice how the number of characters between each `|` is $5$ and not $3$, this is because of the two extra spaces before and after the formatted integer.
-
-Finally, the total profit and average profit margin values should be formatted without specifying a minimum width. Moreover, the average profit margin value should be printed to two decimal places.
-
-### Invalid Code
-
-The message to be printed on invalid code should be
-```
-Invalid code <code> is not a valid product ID. Ignoring.
-```
-Where `<code>` should be replaced with the given invalid code. No minimum width for the format should be specified.
-
-## Efficiency
-To handle the number of different products EPSILON has available and the quantities they are sold in, your program must be efficient. Your program will be tested on an input of $50,000$ different products and $10,000$ lines of input, which it must complete in under $20$ seconds (this is `./Testcases/14_input.txt`).
-
-Achieving this speed can be accomplished with two conditions:
-- Do not sort the list by profit margin each print. Sorting a large list is expensive and this quantity never changes, so do it once.
-- Use binary search rather than linear search to search through item IDs each time an ID is entered into the system. While not as expensive as sorting, this is the most frequent operation you will do, and with a large enough number of items you will see a significant difference.
-
-You now run into an issue:
-1. printing in order of profit margin requires the list to be sorted by profit margin;
-2. binary search on the ID requires the list to be sorted by ID;
-3. You only want to sort once
-
-Here's how you might avoid this issue. We can offer two options (mutually exclusive):
-1. Sort the list by profit margin, allowing you to print in the correct order. Call this list A1 (it may actually be a set of parallel arrays, but this does not matter for the implementation). Then, create an index on the IDs of the products in A1. The index is a second list A2 consisting of the IDs sorted numerically, and the position of that product entry in the main list. You can perform a binary search on A2 and get the location of the corresponding entry in A1
-2. Sort the list by ID, allowing you to binary search though it. Let's call this List B1. Create a second list B2, consisting of the indexes of B1 (originally 0, 1, 2...). Sort B2 list by the profit margin of the corresponding entry in B1. When printing, B2 defines the order in which the entries of B1 will be printed
-
 ## Example I/O
-When printing the sales information, the table should be formatted as specified in the [output format section](#output-format).
+
 
 ### Example 1
 Input:
