@@ -20,13 +20,10 @@ Part 1: Initialize the database
 The first line is the amount of product you want to include in your database.                                    
 The following lines will be asked to input the product ID, product sale price, retail price.                     
 
-Part 2: Tracking Mode
-
-
 Example:
 ```
-2
-2 4000 5000
+2(Amount of Product)
+2(Prod ID) 4000(Sale Price) 5000(Retail Price)
 1 200 250
 ```
 
