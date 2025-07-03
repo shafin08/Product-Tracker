@@ -27,14 +27,15 @@ Example:
 1 200 250
 ```
 
-### Part 2 - Live tracking mode
+Part 2 - Live tracking mode
 Immediately after part 1's input, the program enters part 2 - live tracking mode. Each line of part 2's input will be a single integer code. Unlike part 1, part 2's input can have any number of lines.
 
-There are 3 different types of codes:
-#### 1. Product Sale
-- If `code` is a valid product ID, then the code type is **product sale**.
-- This represents one single sale of the product with ID equal to `code`.
-- The interface should keep track of the number of sales for the product with the ID that matches `code`. You can assume EPSILON has infinite stock of all vaild products entered.
+There are 3 different types of codes:                                                                            
+
+1. Product Sale:
+Typing the product ID equals one sale. 
+
+
 #### 2. Display Sales Information
 - If `code` is equal to either `-1`, or `-2`, then the code type is **display sales information**.
 - The interface should immediately display the following:
