@@ -1,14 +1,25 @@
 # Product Tracker
 
 # Description
-This product tracker is a useful tool for manufacturers who wants to track the sales of their product.
+This product tracker is a useful tool for manufacturers who sells many different products and want to track important information regarding their product.
 
+
+# Features
+Allows you to create a database that track the sales, profit and profit margin of your product.
+A live tracking mode that allows you to make direct changes to your database and see those changes in real time.
+Display a clear table of each product sales, profit, and profit margin. 
+Display total profit and average profit margin
+
+# Input
 Each product have the following attributes:
 - Product ID (integer $>0$).
 - Manufacturer sale price (integer $>0$).
 - Retail price (integer $>0$).
+Part 1: Initialize the database
+The first line is the amount of product you want to include in your database
+The following lines will be asked to input the product ID, product sale price, retail price.
 
-# Features
+Part 2: Tracking Mode
 
 
 Example:
@@ -17,12 +28,6 @@ Example:
 2 4000 5000
 1 200 250
 ```
-
-You can assume that no two products will have the same ID, that `N` will always be grater than $0$, that exactly `N` lines are given after `N`, and that each value can be stored using `int` in the lab machines.
-
-Produt ID, manufacturer sale price, and retail price will always be given as integers. However, you may be given non-positive values.
-
-Your program should gracefully terminate with a **non-zero** exit code on any invalid input.
 
 ### Part 2 - Live tracking mode
 Immediately after part 1's input, the program enters part 2 - live tracking mode. Each line of part 2's input will be a single integer code. Unlike part 1, part 2's input can have any number of lines.
