@@ -5,7 +5,7 @@ This product tracker is a useful tool for manufacturers who sells many different
 
 
 # Features
-Allows you to create a database that track the sales, profit and profit margin of your product.                  
+Allows you to create a database that track the sales, profit and profit margin of your products.                  
 A live tracking mode that allows you to make direct changes to your database and see those changes in real time. 
 Display a clear table of each product sales, profit, and profit margin.                                                                                                         
 Display total profit and average profit margin.
@@ -20,7 +20,7 @@ Part 1: Initialize the database
 The first line is the amount of product you want to include in your database.                                    
 The following lines will be asked to input the product ID, product sale price, retail price.                     
 
-Example:
+Initialize Input Example:
 ```
 2(Amount of Product)
 2(Prod ID) 4000(Sale Price) 5000(Retail Price)
@@ -39,6 +39,8 @@ Typing the product ID equals one sale.
 Typing -1 will display a table that shows all the necessary sale information along with total profit and average profit margin.
 
 Typing -2 will display the final table, final profit and final average profit margin and end the program.
+
+Note: Profit Margin is listed under GM in the output.
 
 # Ouput
 Item with no sales is omitted when product the sales table.
@@ -68,13 +70,13 @@ Average GM: 20.00%
 ### Example 1
 Input:
 ```
-2
-2 4000 5000
+2(Two product in the database)
+2(Product ID) 4000(Manufacturer price) 5000(Retail Price)
 1 200 250
-1
--1
-2
--2
+1(Add one sale to product 1)
+-1(Display sales table)
+2(Add one sale to product 2)
+-2(Display final sales table and end program)
 ```
 
 Output:
@@ -185,3 +187,8 @@ Sales:
 Total profit: $4243
 Average GM: 14.29%
 ```
+
+# How to Run
+Clone repository.
+
+Run the executable "main" in the src directory.
