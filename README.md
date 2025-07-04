@@ -33,7 +33,7 @@ Immediately after part 1's input, the program enters part 2 - live tracking mode
 There are 3 different types of codes:                                                                            
 
 1. Product Sale:
-Typing the product ID equals one sale. 
+Typing the product ID equals one sale to that product.
 
 2. Display Sales information:
 Typing -1 will display a table that shows all the necessary sale information along with total profit and average profit margin.
